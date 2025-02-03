@@ -18,11 +18,14 @@
             overflow: hidden; /* Ensure no scrolling */
         }
 
-        /* Make the iframe fullscreen and responsive */
+        /* Make the iframe fullscreen, responsive, and scaled */
         iframe {
             width: 100vw; /* 100% of the viewport width */
             height: 100vh; /* 100% of the viewport height */
             border: none;
+            transform: scale(1.2); /* Scale up the content */
+            transform-origin: 0 0; /* Scale from the top-left corner */
+            /* Ensures the content fills the screen without UI visible */
         }
     </style>
 </head>
