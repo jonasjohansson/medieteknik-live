@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.1">
-    <title>Medieteknik Live</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miro Board Embed</title>
     <style>
         /* Remove default margins and padding */
         * {
@@ -18,15 +18,38 @@
             overflow: hidden; /* Ensure no scrolling */
         }
 
-        /* Make the iframe fullscreen, responsive, and scaled */
-        iframe {
-            width: 100vw; /* 100% of the viewport width */
-            height: 100vh; /* 100% of the viewport height */
-            border: none;
+        /* Container for the iframe */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
+
+        /* Make the iframe responsive and scale */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            transform-origin: center center;
+        }
+
+        /* Mobile scaling */
+        @media (max-width: 768px) {
+            iframe {
+                transform: scale(1); /* Reduce scale for mobile devices */
+            }
+        }
+
     </style>
 </head>
 <body>
-    <iframe src="https://miro.com/app/board/uXjVLkvGFwg=/" frameborder="0" allowfullscreen></iframe>
+    <div class="iframe-container">
+        <iframe src="https://miro.com/app/board/uXjVLkvGFwg/" frameborder="0" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
+s
