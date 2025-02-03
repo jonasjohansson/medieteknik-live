@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta
-      http-equiv="refresh"
-      content="0; url=https://miro.com/app/board/uXjVLkvGFwg="
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1024" />
+    <title></title>
+    <style>
+      /* Remove default margins and padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        /* Ensure no scrolling */
+      }
+
+      /* Container for the iframe */
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      /* Make the iframe responsive and scale */
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        transform-origin: center center;
+      }
+    </style>
   </head>
-  <body></body>
+
+  <body>
+    <div class="iframe-container">
+      <iframe
+        src="https://miro.com/app/board/uXjVLkvGFwg=/?moveToViewport=-20648,-13783,12650,14524&embedId=581005608653"
+        frameborder="0"
+        scrolling="no"
+        allow="fullscreen; clipboard-read; clipboard-write"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
 </html>
